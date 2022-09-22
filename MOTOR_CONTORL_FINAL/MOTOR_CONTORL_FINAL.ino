@@ -1,4 +1,4 @@
-// loadcell reference| https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=eduino&logNo=221078931222
+// Loadcell reference| https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=eduino&logNo=221078931222
 // "pca9685" board reference | https://m.blog.naver.com/aul-_-/221793940620
 
 #include <Wire.h>                       // I2C library.

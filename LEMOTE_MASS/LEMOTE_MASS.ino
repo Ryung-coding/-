@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>        // LCD-1602-I2C library
 #include <SoftwareSerial.h>
 
-//Sensor define
+//Sensor Define
 LiquidCrystal_I2C lcd(0x27,20,4);     // address : 0x3F or 0x27
 SoftwareSerial bluetooth(2,3);
 
