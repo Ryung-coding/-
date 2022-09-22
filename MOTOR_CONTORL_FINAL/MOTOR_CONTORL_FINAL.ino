@@ -1,5 +1,5 @@
 // Loadcell reference| https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=eduino&logNo=221078931222
-// "pca9685" board reference | https://m.blog.naver.com/aul-_-/221793940620
+// "Pca9685" board reference | https://m.blog.naver.com/aul-_-/221793940620
 
 #include <Wire.h>                       // I2C library.
 #include <Adafruit_PWMServoDriver.h>    // "pca9685" library.
@@ -9,7 +9,7 @@
 #define CLK  2                          // Pin Setting
 
 
-//Sensor define
+//Sensor Define
 Adafruit_PWMServoDriver pwm=Adafruit_PWMServoDriver();
 SoftwareSerial bluetooth(5, 7);
 HX711 scale(DOUT, CLK); 

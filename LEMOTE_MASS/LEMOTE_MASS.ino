@@ -73,6 +73,6 @@ void loop()
   }
   
   bluetooth.write(mass);
-  delay(998);
+  delay(1000);
   data_past = data;
 }
