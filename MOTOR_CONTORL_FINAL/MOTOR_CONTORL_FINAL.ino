@@ -111,9 +111,9 @@ void Show_plot()
 
 void Show_plot_graph()
 {
-  Serial.print(r+4);
+  Serial.print(r);
   Serial.print(",");
-  Serial.print(y+4);
+  Serial.print(y);
   Serial.print(",");
   if (UPorDOWN == 0)
   {
@@ -171,8 +171,7 @@ void loop()
   
   y = lowpassfilter(y , -0.453592 * scale.get_units() / 5.9386 , 0.1); //Note* 1lb = 0.453592kg 
   y = y <= 0 ? 0 : y;
-  //r = lowpassfilter(r, Input_data(), 0.7);
-  r = 1;
+  r = lowpassfilter(r, Input_data(), 0.7);
   u = computePID(r, y, dt);
     
   control_motor(u, UPorDOWN);
