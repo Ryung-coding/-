@@ -62,8 +62,8 @@ void loop()
    lcd.cursor();
    lcd.blink();
 
-   mass = analogRead(AXIS_Y)<=300 ? mass-1 : mass;  // Joystic <=
-   mass = analogRead(AXIS_Y)>=700 ? mass+1 : mass;  // Joystic =>
+   mass = analogRead(AXIS_Y)<=300 ? mass+1 : mass;  // Joystic <=
+   mass = analogRead(AXIS_Y)>=700 ? mass-1 : mass;  // Joystic =>
    delay(10);
   }
 
