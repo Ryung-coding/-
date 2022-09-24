@@ -117,12 +117,11 @@ void Show_plot_graph()
   Serial.print(",");
   if (UPorDOWN == 0)
   {
-    Serial.println(r - 1.5);
+    Serial.println(r - abs( r - y));
   }
   else{
-    Serial.println(r + 1.5);
+    Serial.println(r + abs( r - y));
   }
-
 }
 
 //// A "control_motor" function that produces PWM by identifying the "PWM-frequency[Hz]" and "UPorDOWN" variables obtained from the Desired value
