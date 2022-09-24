@@ -25,7 +25,7 @@ int mass; // [kg]
 
 //PID gain
 float Kp = 100.0;           // P gain
-float Ki = 0.0;             // I gain
+float Ki = 0.1;             // I gain
 float Kd = 0.8;             // D gain
 
 //Control & PID & LPF(Low Pass Filter) Value
