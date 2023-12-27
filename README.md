@@ -44,7 +44,6 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 - 레일은 고정지지로 가정한다.
 
 ![Untitled](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/8378bea4-5370-4b21-8287-7ed3e19ac57e)
-
 ![Untitled (1)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/4b00bc3f-e9f9-4ef3-987f-8a2877938e10)
 
 
@@ -58,6 +57,7 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 ![Untitled (3)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/514496d3-1dc6-4af0-856b-170d55d60162)
 
 이라고 치환한다면,
+
 ![Untitled (4)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/5f8a109a-03f9-4652-8d90-b68fad99aa03)
 
 으로 표현할 수 있다.
@@ -79,7 +79,6 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
     **Note* pwm의 한 파장이 가해질 때, 단위step만큼 회전한다.**
     
 ![Untitled (5)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/d3d29f86-c68d-42ba-ad84-433d38fe2674)
-
 ![Untitled (6)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/fa4d9611-c0a6-4141-94e9-5839bccf0e59)
 
 본 장치는 가해지는 힘 즉, 장력을 제어하는 기구에 해당한다. 그러므로 장력을 생성하는 토크를 제어해야 하며 이에 따라 반지름의 값을 알아야한다.
@@ -91,6 +90,7 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 ![Untitled (7)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/2a5655be-2ad5-45ba-bed8-33f6daf0d68d)
 
 이러한 감긴 양을 시간으로 미분하면,
+
 ![Untitled (8)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/71b317b6-88dc-4240-b36c-54a54b573310)
 
 이다.
@@ -108,6 +108,7 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 
 
 ## **Mediapipe**
+
 ![Untitled (11)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/6e838301-35b2-44fa-ac00-15e9856c499b)
 
 스쿼트 자세 피드백과 스쿼트 모션트래킹을 위하여 Mediapipe를 이용한다.
