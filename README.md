@@ -19,8 +19,6 @@ If you want to see more information? ⤵️
 
 - 전체 구성도
 
-전체적인 구조는 위 그림과 같이 영상처리를 통한 피드백시스템을 연산하는 PC와 본체인  Smithpring, 본체에게 정보를 제공하는 컨트롤러로 구성되어 있다. PC에서는 WebCam을  활용하여 사용자의 모션을 인식하고, 인식된 영상을 처리하여 사용자를 위한 자세 Feedback  서비스를 제공한다.
-
 ### **Controller**
 
 ![image](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/46b8a4ac-ed90-46df-b0d7-a90c3ac8b345)
@@ -45,21 +43,26 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 - load cell의 변형은 무시한다.
 - 레일은 고정지지로 가정한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a26b7072-7c0b-4bb2-b982-b2615a4256da/Untitled.png)
+![Untitled](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/8378bea4-5370-4b21-8287-7ed3e19ac57e)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/58a9d2a3-d47d-425c-abf0-9518ba5a75d2/Untitled.png)
+![Untitled (1)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/4b00bc3f-e9f9-4ef3-987f-8a2877938e10)
+
+
 
 레일을 원점이라고 한다면,
 
+![Untitled (2)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/fef41dd3-8948-4424-972f-6fe4e1dc781e)
+
 이므로   
 
+![Untitled (3)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/514496d3-1dc6-4af0-856b-170d55d60162)
+
 이라고 치환한다면,
+![Untitled (4)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/5f8a109a-03f9-4652-8d90-b68fad99aa03)
 
 으로 표현할 수 있다.
 
-실험을 진행한 결과,  그래프를 산출하였으며, 최종적으로 다음과 같은 형태로 데이터를 보정하여
-
-사용자가 느끼는 중량을 예측하였다.
+실험을 진행한 결과,  그래프를 산출하였으며, 최종적으로 다음과 같은 형태로 데이터를 보정하여 사용자가 느끼는 중량을 예측하였다.
 
 ---
 
@@ -75,10 +78,9 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
     
     **Note* pwm의 한 파장이 가해질 때, 단위step만큼 회전한다.**
     
+![Untitled (5)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/d3d29f86-c68d-42ba-ad84-433d38fe2674)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/02c52321-f1c0-4d22-848a-428a668fef42/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/01fe6586-efe4-43ee-bad5-9ea914a0c270/Untitled.png)
+![Untitled (6)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/fa4d9611-c0a6-4141-94e9-5839bccf0e59)
 
 본 장치는 가해지는 힘 즉, 장력을 제어하는 기구에 해당한다. 그러므로 장력을 생성하는 토크를 제어해야 하며 이에 따라 반지름의 값을 알아야한다.
 
@@ -86,25 +88,27 @@ Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다
 
 그래프에 따라, 스트랩이 풀리에 감기면서 줄의 두께만큼 반지름이 증가하는 형태를 띈다. 그러므로 다음과 같은 형태로 토크와 감긴 스트랩의 길이를 정의를 할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a553d71-acb8-4193-b340-21d44052504b/Untitled.png)
+![Untitled (7)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/2a5655be-2ad5-45ba-bed8-33f6daf0d68d)
 
 이러한 감긴 양을 시간으로 미분하면,
+![Untitled (8)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/71b317b6-88dc-4240-b36c-54a54b573310)
 
 이다.
 
 이때, Motor는 PWM의 한 파장이 인가될 때마다  만큼 회전하므로
 
+![Untitled (9)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/80ad1f9a-4862-4a87-b421-856b2a5d700f)
+
 이라 할 수 있다. 이를 물리 해석프로그램을 활용하면 분석을 통해 최적의 f를 도출했다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d906a5f-c038-4dcd-b0fd-9cf7bee47548/Untitled.png)
+![Untitled (10)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/27e75aab-97b7-4bfb-adad-7f6fffdb259e)
 
 결과적으로 평균적인 운동속도가 0.4m/s 임을 구하였고, 이에 맞는 제어 구동 주파수(f)범위가 1000Hz부근임을 확인하였고, 풀리 설계에 필요한 치수값을 계산하였다.
 
 
 
 ## **Mediapipe**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62a77393-df7f-43db-a28f-4c653c2df27f/Untitled.png)
+![Untitled (11)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/6e838301-35b2-44fa-ac00-15e9856c499b)
 
 스쿼트 자세 피드백과 스쿼트 모션트래킹을 위하여 Mediapipe를 이용한다.
 
@@ -116,7 +120,7 @@ Mediapipe는 Jupyter Notebook환경에서 사용 및 개발되었으며, 트레�
 
 ## **아두이노, 미디어 파이프 전체 구조 메커니즘**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79cef41b-e775-4bb7-b947-2275935a5b80/Untitled.png)
+![Untitled (12)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/dea54dab-bfaa-4085-8089-e0834bc99f3c)
 
 위와 같이 전체 구조 메커니즘을 나타낼 수 있으며 크게 3가지로 분류가 가능하다.
 
@@ -142,7 +146,7 @@ Mediapipe는 Jupyter Notebook환경에서 사용 및 개발되었으며, 트레�
 
 - **피드백 시스템**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/97250d41-d88f-46a0-9357-8bec203935a6/Untitled.png)
+![Untitled (13)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/ca9da2ab-c5a4-4b38-b281-b1899497a241)
 
 피드백 시스템은 위와 같은 구조를 가지고 다음 순서로 진행된다.
 
@@ -159,7 +163,8 @@ Mediapipe는 Jupyter Notebook환경에서 사용 및 개발되었으며, 트레�
 
 - **컨트롤러 사용법**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f8fc29c-08cd-4c6e-a57d-3a41b4c926ee/Untitled.png)
+![Untitled (14)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/1575881c-44b2-4625-8b55-cf37efc3471d)
+
 
 컨트롤러는 위와 같이 제작하였고, 아래 순서로 이용이 가능하다.
 
@@ -177,7 +182,7 @@ Mediapipe는 Jupyter Notebook환경에서 사용 및 개발되었으며, 트레�
 
 - **피드백 시스템**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a2b4124-0dc1-48a8-81e4-6178f3e97c1d/Untitled.png)
+![Untitled (15)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/081fc966-6933-4a44-b38c-821fa09839b8)
 
 스쿼트에서 가장 중요한 근육은 엉덩이과 햄스트링이다. 이는 스쿼트를 하는데 가장 중요한 요소는 종아리는 고정하고 힙힌지와 힙드라이브 연습해야한다는 의미이다.
 
