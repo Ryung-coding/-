@@ -1,9 +1,6 @@
 If you want to see more information? ⤵️
-<br/><br/>
+<br/>
 [💪](https://www.notion.so/ryung-lab/2022-c0648cb8623e4954acecf932edb861fe)
-
-
-
 
 
 **○ 개발 개요**
