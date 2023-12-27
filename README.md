@@ -19,18 +19,16 @@ If you want to see more information? ⤵️
 
 - 전체 구성도
 
-https://lh3.googleusercontent.com/KLx2P6XBjg89hzpluCPIEd3pZ2LPR2doN186rK84RqzDVxmap8AkadHVjCMadJzVg1ccEQqan78EMPAs0m2GPkpo4NmdO3pDCl35o_1mD0FL5q3N1dS9A9eTFSC-lIUe3go_xQRQHOfFaV8Zo_OlXOYduqGCe0wiRMXmuBVujsE-XkZqV7lTYHrrfzyAyg
-
 전체적인 구조는 위 그림과 같이 영상처리를 통한 피드백시스템을 연산하는 PC와 본체인  Smithpring, 본체에게 정보를 제공하는 컨트롤러로 구성되어 있다. PC에서는 WebCam을  활용하여 사용자의 모션을 인식하고, 인식된 영상을 처리하여 사용자를 위한 자세 Feedback  서비스를 제공한다.
 
 ### **Controller**
 
-https://lh3.googleusercontent.com/474nyeJZ-uqG3chBjQ1p4dm9v6ZdXlxBviiLzlgRLQRQWKs05-viVCdhdmAqlwEB3dQKwn0_-BGi8xF-bGoUxU4nKP1D8ZV_ACSQLc984gCBO6DkVVwYnn_umemTGFK7JwU16rmSzPgSBSUlfZWumSUc7iOTg_x32zq4QZ5sYnADm3-YXpEEHJ4ucgoiOA
+![image](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/46b8a4ac-ed90-46df-b0d7-a90c3ac8b345)
 
 본체를 조종하는 컨트롤러는 Arduino UNO에 SZH-EK05 조이스틱, I2C제어용 LCD,  Bluetooth HC-06 모듈을 연결하여 사용한다. 조이스틱을 움직여 MASS 변수값을 조정하고, 이를 LCD판 내에 표시한다. 또한 이 값은 본체인 Smithpring의 블루투스 통신장치인  HC-06과 서로 통신해 값을 넘겨주게 된다.
 
 ### **Smithpring (본체)**
 
-https://lh6.googleusercontent.com/45TEZabKzPvNvfDYpF3MHFMMH4eafJepbNxXF1mYw3kJ8akReWv7k6qjggjC9h9z-9Ld_MA1XRUfWcpBulXmBzfz6HshPXSBYSyZRKpGktJm3HfTfsOEcApz1B0OOJCza3_MYFQO4Pu-orQRMzAdbFOotEPa823qkuePPSFwRJccAWATzIdReiXn6VJmFw
+![image (1)](https://github.com/Ryung-coding/2022Embedded_Smithpring/assets/99808176/7d0d70f2-4dc1-43f3-88f9-ceae405933c9)
 
 Smithpring 장치는 하나의 Circuit Board를 통하여 제어를 진행한다. Circuit Board는  마이크로 컨트롤러의 일종인 Arduino에 연결되어 Load cell Amplifier인 HX711과  bluetooth HC-06 모듈, PWM(Pulse Width Modulation)을 생성하는 pca9685를 제어한다. Circuit Board에는 Motor에 명령을 입력하는 Motor Jack이 설치되어 있다.
